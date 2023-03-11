@@ -8,6 +8,7 @@ function resolve(dir) {
 
 const name = defaultSettings.title || 'vue Admin Template' // page title
 
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 // 如果端口设置为80
 // 使用管理员权限执行命令行
 // 例如, Mac: sudo npm run
@@ -135,5 +136,8 @@ module.exports = {
           config.optimization.runtimeChunk('single')
         }
       )
-  }
+  },
+  // plugins: [
+  //   new BundleAnalyzerPlugin()
+  // ]
 }
